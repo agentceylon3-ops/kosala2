@@ -1206,6 +1206,262 @@ footer span {
 }
 
 
+/*why tuch geogriphy*/
+/* Why Choose Geography Section Styles */
+.geo-why-section {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gws-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gws-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gws-badge {
+  background-color: #25d366;
+  color: #000;
+  padding: 5px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gws-header h2 {
+  font-size: 26px;
+  margin-top: 14px;
+  color: #f1f1f1;
+  line-height: 1.4;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid Layout for Desktop (Side-by-Side) */
+.gws-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* 8-Image Standalone Slider Styles */
+.geo-slider-container {
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 2px solid #333;
+  background-color: #000;
+  position: relative;
+}
+
+.geo-slider-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.geo-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.geo-slide.active-geo-slide {
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Content Box Styles */
+.gws-content-box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gws-content-box h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.gws-sub {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.gws-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gws-list li {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+.gws-list li span {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.gws-list li strong {
+  color: #fff;
+}
+
+/* Tablet & Desktop Layout */
+@media (min-width: 900px) {
+  .gws-grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+  }
+  
+  .geo-slider-container {
+    height: 420px;
+  }
+  
+  .gws-header h2 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .geo-slider-container {
+    height: 260px;
+  }
+  
+  .gws-content-box {
+    padding: 20px;
+  }
+  
+  .gws-header h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+/*our group*/
+/* A/L Geography Notice Section Styles */
+.al-notice-section {
+  
+  color: #ffffff;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aln-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.aln-card {
+ 
+   /* Glowing Red Accent Border */
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+.aln-badge {
+  background-color: #ff4757;
+  color: #ffffff;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.aln-card h2 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.aln-desc {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+}
+
+/* WhatsApp Join Button */
+.aln-btn {
+  display: inline-block;
+  background-color: #25d366; /* WhatsApp Green */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.aln-btn:hover {
+  background-color: #1ebc57;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .aln-card {
+    padding: 25px 18px;
+  }
+  
+  .aln-card h2 {
+    font-size: 20px;
+  }
+  
+  .aln-desc {
+    font-size: 14px;
+  }
+  
+  .aln-btn {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 15px;
+  }
+}
 
 
 
@@ -1215,7 +1471,7 @@ footer span {
 <body>
 <div id="bar"></div>
 <nav id="nav"><div class="wrap nav-in">
- <a href="#top" class="logo-b"><img src="logo.jpg" alt="Logo">Kosala Bandara</a>
+ <a href="#top" class="logo-b"><img src="logo.jpg" alt="Logo">LK ACADEMY</a>
  <button class="burger" id="bg" aria-label="Menu">☰</button>
  <div class="links" id="lk">
   <a href="#results">ප්‍රතිඵල</a><a href="#method">වැඩපිළිවෙළ</a><a href="#schedule">කාලසටහන</a><a href="#memories">මතකයන්</a><a href="#contact">සම්බන්ධ වන්න</a>
@@ -1243,7 +1499,7 @@ footer span {
 <section id="note" style="padding:20px 0 40px">
  <div class="wrap" id="register">
   <div class="note rv">
-   <h3>A9 සුබ සිහින සැබෑ වේවා ! 💖</h3>
+   <h3>A9 සුබ සිහින සැබෑ වේවා ! </h3>
    <p>පුතේ ඔයා හරිම වාසනාවන්තයි . එකයි ඔයාට මේ පණිවිඩය හම්බෙන්නේ ඉතිං ඔයාට සාමන්‍ය පෙළට අදාළ සියලු විෂයන් වල Note, Papers, MCQ අපිට පුලුවන් විදියට දානවා දාලත් තියනවා ඉතිං හොදට මේක භාවිතා කරලා ඔයා A9ක්ම ගන්න ලැබෙන්න කියලා Wish කරනවා.. ආ යාලුවන්ටත් කියන්න අපි හැමොම ගොඩයන්න ඕන ඒක හින්දා මේක යාලුවන්ටත් යවන්න</p>
    <div class="wag">
     <a href="https://whatsapp.com/channel/0029VbBN8kaBPzjZ7aczvW3y" target="_blank" rel="noopener" class="btn b-wa"> Grade 10  LK Academy </a>
@@ -1254,6 +1510,59 @@ footer span {
  </div>
 </section>
 <br><br>
+
+<!-- Why Choose Geography Section with 8-Image Slider -->
+<section class="geo-why-section">
+  <div class="gws-container">
+    <div class="gws-header">
+      <span class="gws-badge">විෂය මාර්ගෝපදේශය</span>
+      <h2>ඔබ උසස් පෙළ කලා කළත්, Tech කළත්, වාණිජ කළත් භූගෝල විද්‍යාව තෝරාගත යුත්තේ ඇයි?</h2>
+    </div>
+
+    <div class="gws-grid">
+      <!-- Left Column: 8 Images Slideshow -->
+      <div class="geo-slider-container">
+        <div class="geo-slider-wrapper">
+          <img src="geo1.jpg" alt="Geography 1" class="geo-slide active-geo-slide">
+          <img src="geo2.jpg" alt="Geography 2" class="geo-slide">
+          <img src="geo3.jpg" alt="Geography 3" class="geo-slide">
+          <img src="geo4.jpg" alt="Geography 4" class="geo-slide">
+          <img src="geo5.jpg" alt="Geography 5" class="geo-slide">
+          <img src="geo6.jpg" alt="Geography 6" class="geo-slide">
+          <img src="geo7.jpg" alt="Geography 7" class="geo-slide">
+          <img src="geo8.jpg" alt="Geography 8" class="geo-slide">
+        </div>
+      </div>
+
+      <!-- Right Column: Benefits / Reasons -->
+      <div class="gws-content-box">
+        <h3>භූගෝල විද්‍යාව තෝරාගැනීමේ විශේෂ වාසි</h3>
+        <p class="gws-sub">ඔබ කුමන විෂය ධාරාවක් හැදෑරුවද, උසස් පෙළ සඳහා භූගෝල විද්‍යාව හැදෑරීමෙන් ඔබේ අනාගත උපාධි හා රැකියා අවස්ථා පුළුල් කරගත හැක.</p>
+        
+        <ul class="gws-list">
+          <li>
+           
+            <strong>විෂය ධාරා සීමාවකින් තොරයි:</strong> කලා, තාක්ෂණ (Tech) හෝ වාණිජ (Commerce) කුමන අංශයකින් උසස් පෙළ කළත් පහසුවෙන් ඉහළ සාමාර්ථයක් (A, B) ලබාගත හැකි විෂයයකි.
+          </li>
+          <li>
+            
+            <strong>විශ්වවිද්‍යාල ප්‍රවේශය පහසු වීම:</strong> විශ්වවිද්‍යාල කලා හා සමාජීය විද්‍යා පීඨ සඳහා පිවිසීමට ඉතා ඉහළ ලකුණු මට්ටමක් ලබා දෙන ප්‍රධාන විෂයයකි.
+          </li>
+          <li>
+           
+            <strong>නවීන තාක්ෂණය සමඟ බැඳී පැවතීම:</strong> GIS (භූගෝලීය තොරතුරු පද්ධති) සහ දුරස්ථ සංවේදනය (Remote Sensing) වැනි අනාගත ඉල්ලුම අධික තාක්ෂණික ක්ෂේත්‍ර රැසකට මඟ පෙන්වයි.
+          </li>
+          <li>
+            
+            <strong>රැකියා අවස්ථා බහුල වීම:</strong> නාගරික සැලසුම්කරණය, පරිසර කළමනාකරණය, සංචාරක කර්මාන්තය සහ රාජ්‍ය සේවා ක්ෂේත්‍රවල පුළුල් රැකියා අවස්ථා හිමිවේ.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
 
 
 <!-- Geography Teacher Introduction Section -->
@@ -1387,6 +1696,25 @@ footer span {
   <div class="sgrid2" id="sch" style="text-align:left"></div>
  </div>
 </section>
+
+<!-- A/L Geography New Batch Notice Section -->
+<section class="al-notice-section">
+  <div class="aln-container">
+    <div class="aln-card">
+      <span class="aln-badge"> නව පන්ති ආරම්භය</span>
+      <h2>විභාගය අවසන් වූ වහාම උසස් පෙළ භූගෝල විද්‍යාව නව පන්ති ආරම්භ වේ!</h2>
+      <p class="aln-desc">
+        සාමාන්‍ය පෙළ (O/L) විභාගයෙන් පසු ඔබේ උසස් පෙළ (A/L) භූගෝල විද්‍යාව සිහිනය වෙනුවෙන් හොඳම මඟපෙන්වීම ලබාගැනීමට අපගේ නිල WhatsApp සමූහය සමඟ අදම එක්වන්න.
+      </p>
+
+      <!-- Action Button -->
+      <a href="https://chat.whatsapp.com/B6GE0F6tqgCDp1XntIO3cp" target="_blank" class="aln-btn">
+        <span> WhatsApp Group එකට Join වෙන්න</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -1690,6 +2018,33 @@ $('#rf').onsubmit = e => {
   const m = `ආයුබෝවන් සර්, මම පන්තියට Register වෙන්න කැමතියි.\n\n*නම:* ${v.n}\n*ශ්‍රේණිය:* ${v.g}\n*පාසල:* ${v.s}\n*පන්තිය:* ${v.i}`;
   window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(m)}`, '_blank', 'noopener');
 };
+
+
+//why geogrophy thoraganna ona 
+document.addEventListener("DOMContentLoaded", function() {
+  let geoCurrentIndex = 0;
+  const geoSlides = document.querySelectorAll('.geo-slide');
+
+  function rotateGeoSlides() {
+    if(geoSlides.length === 0) return;
+    
+    // දැනට පෙන්වන පින්තූරයෙන් active class එක ඉවත් කිරීම
+    geoSlides[geoCurrentIndex].classList.remove('active-geo-slide');
+    
+    // ඊළඟ පින්තූරයට යාම (8න් පසු නැවත පළමු පින්තූරයට පැමිණේ)
+    geoCurrentIndex = (geoCurrentIndex + 1) % geoSlides.length;
+    
+    // නව පින්තූරයට active class එක එකතු කිරීම
+    geoSlides[geoCurrentIndex].classList.add('active-geo-slide');
+  }
+
+  // සෑම තත්පර 3.5 කට වතාවක් පින්තූරය මාරු වේ (3500 milliseconds = 3.5 Seconds)
+  if(geoSlides.length > 0) {
+    setInterval(rotateGeoSlides, 3500);
+  }
+});
+
+
 </script>
 </body>
 </html>
