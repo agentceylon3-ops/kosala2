@@ -500,7 +500,7 @@ nav.solid {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
+  opacity: 1; /* මෙතන 0 තිබුණ එක 1 කරන්න */
   transition: opacity 1.2s;
 }
 
@@ -1108,13 +1108,14 @@ footer span {
 
 
 /* ==========================================
-   Teacher Introduction Section Styles
+   Geography Teacher Section (Independent Styles)
    ================================---------- */
 #about-teacher {
   background-color: var(--bg);
+  position: relative;
 }
 
-.tgrid {
+.geo-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 44px;
@@ -1122,49 +1123,46 @@ footer span {
   margin-top: 34px;
 }
 
-.tslide {
+.geo-img-box {
   position: relative;
   aspect-ratio: 4/5;
   border-radius: 20px;
   padding: 5px;
   background: linear-gradient(135deg, #fff, var(--gold) 50%, var(--gold2));
   box-shadow: 0 0 36px rgba(212, 175, 55, .3);
+  width: 100%;
 }
 
-.tslide div {
-  position: absolute;
-  inset: 5px;
+.geo-img-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
   background: #111;
 }
 
-.tslide img {
+/* ෆොටෝ එක Mobile සහ Desktop දෙකේදීම ස්ථිරවම පෙන්වීමට */
+.geo-img-inner img {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.2s;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-.tslide img.on {
-  opacity: 1;
-}
-
-.tb {
+.geo-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 30px;
 }
 
-.tb h3 {
-  font-size: 1.9rem;
-}
-
-.tb .q {
+.geo-badge {
   color: var(--or);
   font-size: .9rem;
   font-weight: 600;
@@ -1172,7 +1170,12 @@ footer span {
   display: inline-block;
 }
 
-.tb li {
+.geo-list {
+  padding: 0;
+  margin: 0;
+}
+
+.geo-list li {
   list-style: none;
   color: #ccc;
   margin-bottom: 12px;
@@ -1181,16 +1184,29 @@ footer span {
   font-size: .96rem;
 }
 
-/* Mobile Screen වලදී නිවැරදිව පෙන්වීමට */
+/* Mobile Screens වලදී වෙනස් වන ආකාරය */
 @media(max-width: 820px) {
-  .tgrid {
+  .geo-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
-  .tslide {
-    max-width: 320px;
+  
+  .geo-img-box {
+    max-width: 280px;
     margin: 0 auto;
   }
+
+  .geo-card {
+    padding: 20px 18px;
+  }
+  
+  .geo-card h3 {
+    font-size: 1.5rem !important;
+  }
 }
+
+
+
 
 
 
@@ -1240,32 +1256,32 @@ footer span {
 <br><br>
 
 
-<!-- Teacher Introduction Section -->
+<!-- Geography Teacher Introduction Section -->
 <section class="topo" id="about-teacher">
   <div class="wrap">
     <div class="center">
       <span class="tag">විෂය මාලාව හා මඟපෙන්වීම</span>
-      <h2 class="title">කෝසල බණ්ඩාර</h2>
+      <h2 class="title">මගේ හඳුන්වාදීම</h2>
       <p class="lead">O/L වලින් පසු A/L සාර්ථක කරගන්නට ඔබව නිවැරදි මඟපෙන්වීමකින් සන්නද්ධ කරන භූගෝල විද්‍යා ගුරුතුමා.</p>
     </div>
 
-    <div class="tgrid">
-      <!-- ගුරුතුමාගේ පින්තූරය පෙන්වන ස්ලයිඩය / පෙට්ටිය -->
-      <div class="tslide">
-        <div>
-          <!-- මෙහි 'teacher.jpg' යන්න වෙනුවට ඔයාගේ פොටෝ එකේ නම (උදා: sir.jpg) දෙන්න -->
-          <img src="tt1.jpg" alt="Geography Teacher" class="on" style="object-position: top;">
+    <div class="geo-grid">
+      <!-- ගුරුතුමාගේ පින්තූරය පෙන්වන පෙට්ටිය -->
+      <div class="geo-img-box">
+        <div class="geo-img-inner">
+          <!-- මෙහි 'teacher.jpg' වෙනුවට ඔයාගේ פොටෝ එකේ නම දෙන්න -->
+          <img src="tt1.jpg" alt="Geography Teacher" style="object-position: top;">
         </div>
       </div>
 
       <!-- ගුරුතුමාගේ විස්තර සහිත පෙට්ටිය -->
-      <div class="tb rv">
-        <span class="q">උසස් පෙළ භූගෝල විද්‍යාව විශේෂඥ</span>
-        <h3 style="margin-bottom: 8px; color: var(--gold);">භූගෝල විද්‍යාව (Geography)</h3>
+      <div class="geo-card rv">
+        <span class="geo-badge">උසස් පෙළ භූගෝල විද්‍යාව විශේෂඥ</span>
+        <h3 style="margin-bottom: 8px; color: var(--gold); font-size: 1.9rem;">භූගෝල විද්‍යාව (Geography)</h3>
         <p style="color: var(--mut); font-size: .95rem; margin-bottom: 20px;">
           O/L විභාගයෙන් පසු උසස් පෙළ සඳහා භූගෝල විද්‍යාව විෂය තෝරාගන්නා දරුවන් වෙනුවෙන්ම සකස් කළ සරල, තාර්කික සහ විභාග කේන්ද්‍රීය ඉගැන්වීම් ක්‍රමවේදයකි.
         </p>
-        <ul>
+        <ul class="geo-list">
           <li>
             <span style="color: var(--gold);">✔</span> 
             <span>O/L සාර්ථක කරගත් දරුවන්ට A/L භූගෝල විද්‍යාවට අවශ්‍ය මූලික පදනම මුල සිටම සරලව කියාදීම.</span>
@@ -1284,7 +1300,7 @@ footer span {
           </li>
         </ul>
         <div style="margin-top: 24px;">
-          <a href="#register1" class="btn b-gold" style="font-size: .92rem; padding: 12px 24px;">පන්තියට සම්බන්ධ වන්න</a>
+          <a href="#register" class="btn b-gold" style="font-size: .92rem; padding: 12px 24px;">පන්තියට සම්බන්ධ වන්න</a>
         </div>
       </div>
     </div>
